@@ -1,7 +1,5 @@
 .newsfeed {
   flex: 0.7;
-
-  border: 1px solid grey;
 }
 
 .newsfeed__info span {

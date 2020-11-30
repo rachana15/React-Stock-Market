@@ -6,11 +6,11 @@ import Stats from "./components/Stats";
 function App() {
   return (
     <div className="App">
-      <div class="app__header">
+      <div className="app__header">
         <Header />
       </div>
-      <div class="app__body">
-        <div class="app__container">
+      <div className="app__body">
+        <div className="app__container">
           <NewsFeed />
           <Stats />
         </div>

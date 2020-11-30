@@ -6,19 +6,18 @@ import "../style/css/Header.css";
 function Header() {
   return (
     <div className="header">
-      <div class="header__logo">
+      <div className="header__logo">
         <img src={Logo} alt="logo" />
       </div>
-      <div class="header__search">
-        <div class="header__searchIcon">
-          <SearchIcon className="search__icon"/>
+      <div className="header__search">
+        <div className="header__searchIcon">
+          <SearchIcon className="search__icon" />
         </div>
-        <div class="searchInput">
-            
+        <div className="searchInput">
           <input placeholder="Search" type="text"></input>
         </div>
       </div>
-      <div class="header__menuItem">
+      <div className="header__menuItem">
         <a href="#">Free Stock</a>
         <a href="#">Portfolio</a>
         <a href="#">Cash</a>
