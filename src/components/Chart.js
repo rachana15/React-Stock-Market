@@ -4,24 +4,7 @@ import "../style/css/Chart.css";
 
 function Chart() {
   const [graphData, setGraphData] = useState([]);
-  const data = [
-    {
-      x: 10,
-      y: 20,
-    },
-    {
-      x: 15,
-      y: 10,
-    },
-    {
-      x: 15,
-      y: 10,
-    },
-    {
-      x: 15,
-      y: 10,
-    },
-  ];
+
   const options = {
     legend: {
       display: false,
@@ -68,6 +51,7 @@ function Chart() {
       value += Math.round((Math.random() < 0.5 ? 1 : 0) * Math.random() * 10);
       data.push({ x: date, y: value });
     }
+    // console.log("data", data);
     setGraphData(data);
   };
   useEffect(() => {

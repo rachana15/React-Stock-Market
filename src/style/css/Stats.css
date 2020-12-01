@@ -4,6 +4,7 @@
   margin-left: 48px;
   padding: 0px 30px 30px 0px;
   color: white;
+  overflow: scroll;
 }
 
 .stats__container {
@@ -12,7 +13,7 @@
   background-color: #1e2023;
   border-radius: 5px;
   border: 1px solid #42495d;
-  height: 600px;
+  min-height: 600px;
 }
 
 .stats__header {
@@ -23,4 +24,14 @@
   border-bottom: 1px solid #42494d;
   padding: 20px 20px 10px 20px;
   font-weight: 500;
+}
+
+.stats__header .MuiSvgIcon-root {
+  cursor: pointer;
+  color: rgb(0, 200, 5);
+}
+.stats__header .MuiSvgIcon-root:hover {
+}
+.icon_transform {
+  transform: rotate(180deg) !important;
 }
