@@ -12,16 +12,11 @@ function StockRow({ name, openPrice, price }) {
     legend: {
       display: false,
     },
-    maintainAspectRatio: false,
 
     scales: {
       xAxes: [
         {
           type: "time",
-          time: {
-            format: "MM/DD/YY",
-            tooltipFormat: "ll",
-          },
           ticks: {
             display: false,
           },
@@ -36,10 +31,10 @@ function StockRow({ name, openPrice, price }) {
       ],
     },
   };
-  let getStockData = (stock) => {
+  let getStockData = (stock, to, from) => {
     return axios
       .get(
-        `https://finnhub.io/api/v1/stock/candle?symbol=${stock}&resolution=1&from=1605543327&to=1605629727&token=bv2vsnn48v6qoktim3mg`
+        `https://finnhub.io/api/v1/stock/candle?symbol=${stock}&resolution=1&from=${from}&to=${to}&token=bv2vsnn48v6qoktim3mg`
       )
       .catch((error) => {
         console.log("error", error);
@@ -48,8 +43,15 @@ function StockRow({ name, openPrice, price }) {
   useEffect(() => {
     let tempStockData = [];
     let promises = [];
+    const today = new Date();
+    const yesterday = new Date(today);
+    yesterday.setDate(yesterday.getDate() - 1);
+    today.toDateString();
+    yesterday.toDateString();
+    const today_unix = parseInt((today.getTime() / 1000).toFixed(0));
+    const yesterday_unix = parseInt((yesterday.getTime() / 1000).toFixed(0));
     promises.push(
-      getStockData(name).then((res) => {
+      getStockData(name, today_unix, yesterday_unix).then((res) => {
         for (var i = 0; i < res.data.c.length; i++) {
           var date = new Date(res.data.t[i] * 1000);
           tempStockData.push({
@@ -111,7 +113,7 @@ function StockRow({ name, openPrice, price }) {
         )}
       </div>
       <div className="stockrow__price">
-        <h4>{price}</h4>
+        <h4>${price.toFixed(2)}</h4>
         {percentage > 0 ? (
           <h5 className="positve__percentage">+ {percentage.toFixed(2)}% </h5>
         ) : (

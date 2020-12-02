@@ -3,6 +3,7 @@ import axios from "axios";
 import "../style/css/Stats.css";
 import StockRow from "./StockRow";
 import ExpandMoreIcon from "@material-ui/icons/ExpandMore";
+import { db } from "../firebase";
 
 const TOKEN = "bv2vsnn48v6qoktim3mg";
 const Base_URL = "https://finnhub.io/api/v1/quote";
