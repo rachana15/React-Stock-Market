@@ -23,9 +23,45 @@
 
 .stockrow__price > h4 {
   font-weight: 400;
+  font-size: 14px;
+}
+.stockrow__price > h5 {
+  font-weight: 400;
+  font-size: 14px;
+}
+
+.stock__chart {
+}
+
+.stockrow__name {
+  flex-grow: 0;
+  flex-shrink: 1;
+  flex-basis: 50%;
+}
+
+.stockrow__name > h4 {
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  font-size: 14px;
+}
+
+.stockrow__price {
+  flex-grow: 0;
+  flex-shrink: 1;
+  flex-basis: 50%;
+  flex-direction: column;
+  margin-left: 4px;
+  padding: 10px;
+  text-align: right;
 }
 
 .stock__chart {
   height: 60px;
   width: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-grow: 0;
+  flex-shrink: 0;
+  flex-basis: 64px;
 }
