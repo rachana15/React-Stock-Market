@@ -55,7 +55,7 @@
   text-align: right;
 }
 
-.stock__chart {
+.stock__chart .chart {
   height: 60px;
   width: 100px;
   display: flex;

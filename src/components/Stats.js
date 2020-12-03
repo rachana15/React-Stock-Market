@@ -5,7 +5,7 @@ import StockRow from "./StockRow";
 import ExpandMoreIcon from "@material-ui/icons/ExpandMore";
 import { db } from "../firebase";
 
-const TOKEN = "bv2vsnn48v6qoktim3mg";
+const TOKEN = "bv4884v48v6tcp17jm30";
 const Base_URL = "https://finnhub.io/api/v1/quote";
 
 function Stats() {
