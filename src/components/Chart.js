@@ -54,13 +54,13 @@ function Chart({
       ],
     },
   };
-  let getStockData = (stock, to, from) => {
-    // console.log("stock>>>>>>>>", stock);
-    // console.log("to>>>>>>>>", to);
-    // console.log("from>>>>>>>>>", from);
+  let getStockData = async (stock, to, from) => {
+    console.log("stock>>>>>>>>", stock);
+    console.log("to>>>>>>>>", to);
+    console.log("from>>>>>>>>>", from);
     return axios
       .get(
-        `https://finnhub.io/api/v1/stock/candle?symbol=${stock}&resolution=1&from=${from}&to=${to}&token=bv4884v48v6tcp17jm30`
+        `https://finnhub.io/api/v1/stock/candle?symbol=${stock}&resolution=1&from=${from}&to=${to}&token=bv4ghsn48v6qpatdke30`
       )
       .catch((error) => {
         console.log("error", error);
@@ -85,8 +85,12 @@ function Chart({
     let tempStockData = [];
     let promises = [];
     promises.push(
-      getStockData(name, to, from).then((res) => {
-        console.log(res);
+      getStockData(
+        name,
+        to ? `${to}` : "1606976930",
+        from ? `${from}` : "1606867200"
+      ).then((res) => {
+        // console.log(res);
         for (var i = 0; i < res.data.c.length; i++) {
           var date = new Date(res.data.t[i] * 1000);
           tempStockData.push({

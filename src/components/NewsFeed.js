@@ -10,9 +10,9 @@ function NewsFeed() {
   const [yesterdayDate, setYesterdayDate] = useState("");
   const [monthDate, setMonthDate] = useState("");
   const [year, setYear] = useState("");
-  console.log(yesterdayDate);
-  console.log(monthDate);
-  console.log(year);
+  // console.log(yesterdayDate);
+  // console.log(monthDate);
+  // console.log(year);
   const clickDay = () => {
     setDayStats(true);
     setMonthStats(false);
@@ -64,7 +64,7 @@ function NewsFeed() {
             {monthStats && <Chart to={todayDate} from={monthDate} />}
             {yearStats && <Chart to={todayDate} from={year} />}
           </div>
-          <div class="newsfeed__stats">
+          <div className="newsfeed__stats">
             <button onClick={clickDay}> 1D </button>
             <button onClick={clickMonth}> 1M </button>
             <button onClick={clickYear}> 1Y </button>

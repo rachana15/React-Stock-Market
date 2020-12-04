@@ -5,3 +5,29 @@
 .newsfeed__info span {
   color: gray;
 }
+
+.newsfeed__stats > button {
+  background: none;
+  border: 0px;
+  cursor: pointer;
+  font: inherit;
+  padding: 0px;
+  color: unset;
+  appearance: none;
+  margin-right: 10px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.newsfeed__stats > button:hover {
+  color: #5ac53b;
+}
+
+.newsfeed__stats > button:focus {
+  outline: none;
+  border: none;
+}
+.newsfeed__stats {
+  border-bottom: 1px solid #3b4757;
+  padding-bottom: 12px;
+}

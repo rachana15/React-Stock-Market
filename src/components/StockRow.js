@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from "react";
-
 import "../style/css/StockRow.css";
 import Chart from "./Chart";
 
