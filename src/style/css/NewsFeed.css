@@ -4,6 +4,16 @@
 
 .newsfeed__info span {
   color: gray;
+  font-weight: 400;
+}
+
+.newsfeed__info > h1 {
+  margin-bottom: 4px;
+}
+.newsfeed p {
+  margin-bottom: 4px;
+  font-weight: bold;
+  font-size: 12px;
 }
 
 .newsfeed__stats > button {
@@ -27,7 +37,14 @@
   outline: none;
   border: none;
 }
+
 .newsfeed__stats {
+  border-top: 1px solid #3b4757;
+  padding-top: 12px;
   border-bottom: 1px solid #3b4757;
   padding-bottom: 12px;
+}
+
+.newsfeed__news > h1 {
+  margin-top: 12px;
 }

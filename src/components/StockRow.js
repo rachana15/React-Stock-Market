@@ -3,7 +3,7 @@ import "../style/css/StockRow.css";
 import Chart from "./Chart";
 
 function StockRow({ name, openPrice, price }) {
-  let percentage = (price - openPrice) / openPrice;
+  let percentage = price - openPrice;
 
   const [from, setFrom] = useState();
   const [to, setTo] = useState();

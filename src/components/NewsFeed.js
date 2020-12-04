@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import "../style/css/NewsFeed.css";
 import Chart from "./Chart";
+import News from "./News";
 
 function NewsFeed() {
   const [dayStats, setDayStats] = useState(true);
@@ -53,10 +54,10 @@ function NewsFeed() {
           <div className="newsfeed__info">
             <h1>US$1,080.46</h1>
             <p>
-              +US$16.43(+1.53%)<span>Today</span>
+              +US$16.43(+1.53%)<span> Today</span>
             </p>
             <p>
-              -US$1.43(-0.17%)<span>After Hours</span>
+              -US$1.43(-0.17%)<span> After Hours</span>
             </p>
           </div>
           <div className="newsfeed__chart">
@@ -69,6 +70,10 @@ function NewsFeed() {
             <button onClick={clickMonth}> 1M </button>
             <button onClick={clickYear}> 1Y </button>
           </div>
+        </div>
+        <div className="newsfeed__news">
+          <h1>News</h1>
+          <News />
         </div>
       </div>
     </div>

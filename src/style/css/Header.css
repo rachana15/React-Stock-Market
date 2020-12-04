@@ -11,17 +11,19 @@
 }
 
 .header__logo {
-  /* margin-left: 48px; */
+  margin-left: 48px;
 }
 .header__searchIcon {
   color: grey;
   size: 10px;
+
   display: flex;
   align-items: center;
 }
 .search__icon {
   font-size: 20px !important;
 }
+
 .searchInput > input {
   background-color: transparent;
   outline: none;
@@ -37,6 +39,7 @@
   min-width: 120px;
   padding-left: 10px;
   display: flex;
+  margin-left: -48px;
   align-items: center;
   border: 1px solid #31363a;
 }
