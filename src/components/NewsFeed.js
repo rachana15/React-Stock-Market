@@ -71,8 +71,12 @@ function NewsFeed() {
             <button onClick={clickYear}> 1Y </button>
           </div>
         </div>
+        <div className="newsFeed__topStocksContainer"></div>
         <div className="newsfeed__news">
-          <h1>News</h1>
+          <div className="newsfeed__newsHeader">
+            <h1>News</h1>
+          </div>
+
           <News />
         </div>
       </div>

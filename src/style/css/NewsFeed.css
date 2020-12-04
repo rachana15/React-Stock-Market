@@ -48,3 +48,8 @@
 .newsfeed__news > h1 {
   margin-top: 12px;
 }
+
+.newsfeed__newsHeader {
+  border-bottom: 1px solid #3b4757;
+  padding-bottom: 12px;
+}
