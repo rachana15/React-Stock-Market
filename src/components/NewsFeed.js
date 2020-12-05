@@ -46,7 +46,7 @@ function NewsFeed() {
     setYesterdayDate(parseInt((yesterday.getTime() / 1000).toFixed(0)));
     setMonthDate(parseInt((month.getTime() / 1000).toFixed(0)));
     setYear(parseInt((year.getTime() / 1000).toFixed(0)));
-    console.log("newsFEED");
+    // console.log("newsFEED");
   }, []);
   return (
     <div className="newsfeed">

@@ -3,11 +3,11 @@ import "../style/css/News.css";
 import NewsRow from "./NewsRow";
 import axios from "axios";
 
-const TOKEN = "bv5i62748v6qnlldbtcg";
+const TOKEN = "bv5s5k748v6r8nt3qcsg";
 const Base_URL = "https://finnhub.io/api/v1/";
 function News() {
   const [marketNews, setMarketNews] = useState([]);
-  console.log("marketnews>>>>>", marketNews);
+  // console.log("marketnews>>>>>", marketNews);
   useEffect(() => {
     const tempNews = [];
     const promises = [];
@@ -15,7 +15,7 @@ function News() {
       axios
         .get(`${Base_URL}news?category=general&token=${TOKEN}`)
         .then((res) => {
-          console.log(res.data);
+          // console.log(res.data);
           for (var i = 0; i < 10; i++) {
             tempNews.push(res.data[i]);
           }
@@ -30,7 +30,7 @@ function News() {
   }, []);
   return (
     <div className="news">
-      <div class="news__cointainer">
+      <div className="news__cointainer">
         {marketNews.map((news) => {
           return (
             <NewsRow

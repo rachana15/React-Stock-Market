@@ -12,8 +12,8 @@
   margin: -1px -24px;
   padding: 25px 24px;
 }
-.newsrow__articleLink:hover {
-  background-color: #1e212496;
+.newsrow__article:hover {
+  background-color: #1e2124;
 }
 
 .newsrow__articleLink {
@@ -31,6 +31,9 @@
   justify-content: space-between;
   align-items: center;
 }
+.newsrow__articleHeaderTitle > h4 {
+  font-size: 13px;
+}
 
 .newsrow__articleBody {
   display: flex;
@@ -43,7 +46,9 @@
 
 .newsrow__articleBodyImage > img {
   object-fit: contain;
-  height: 130px;
+
+  width: 130px;
+  margin-left: 10px;
 }
 
 .newsrow__articleBodyDescriptionHeader {
@@ -53,4 +58,9 @@
 .newsrow__articleBodyDescriptionBody {
   margin-top: 24px;
   color: grey;
+  font-size: 13px;
+}
+
+.newsrow__articleTime {
+  font-size: 12px;
 }
