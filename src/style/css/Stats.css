@@ -10,9 +10,9 @@
 .stats__container {
   flex-direction: column;
   flex: 1;
-  background-color: #1e2023;
+  background-color: #1e2124;
   border-radius: 5px;
-  border: 1px solid #42495d;
+  border: 1px solid #40494e;
   min-height: 600px;
 }
 
@@ -21,7 +21,7 @@
   align-items: center;
   justify-content: space-between;
   font-size: 16px;
-  border-bottom: 1px solid #42494d;
+  border-bottom: 1px solid #40494e;
   padding: 20px 20px 10px 20px;
   font-weight: 500;
 }
@@ -30,8 +30,7 @@
   cursor: pointer;
   color: rgb(0, 200, 5);
 }
-.stats__header .MuiSvgIcon-root:hover {
-}
+
 .icon_transform {
   transform: rotate(180deg) !important;
 }

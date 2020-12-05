@@ -7,7 +7,7 @@ function Chart({
   to = "1606976930",
   from = "1606867200",
   name = "AAPL",
-  borderColor = "#5AC53B",
+  borderColor = "rgba(0, 200, 5, 1)",
   backgroundColor = "black",
 }) {
   const [graphData, setGraphData] = useState([]);
@@ -21,7 +21,7 @@ function Chart({
       mode: "index",
       intersect: true,
       callbacks: {
-        label: function (tooltipItem, data) {
+        label: function (tooltipItem) {
           return tooltipItem.value;
         },
       },
@@ -55,12 +55,12 @@ function Chart({
     },
   };
   let getStockData = async (stock, to, from) => {
-    console.log("stock>>>>>>>>", stock);
-    console.log("to>>>>>>>>", to);
-    console.log("from>>>>>>>>>", from);
+    // console.log("stock>>>>>>>>", stock);
+    // console.log("to>>>>>>>>", to);
+    // console.log("from>>>>>>>>>", from);
     return axios
       .get(
-        `https://finnhub.io/api/v1/stock/candle?symbol=${stock}&resolution=1&from=${from}&to=${to}&token=bv4ghsn48v6qpatdke30`
+        `https://finnhub.io/api/v1/stock/candle?symbol=${stock}&resolution=1&from=${from}&to=${to}&token=bv5i62748v6qnlldbtcg`
       )
       .catch((error) => {
         console.log("error", error);

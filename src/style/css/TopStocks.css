@@ -1,0 +1,45 @@
+.topstocks {
+  border: 1px solid #1e2124;
+  margin-top: 24px;
+  margin-bottom: 24px;
+  border-radius: 4px;
+}
+.topstocks:hover {
+  background-color: #1e2124;
+  /* border: none; */
+}
+
+.topstocks__container {
+  padding: 24px 23px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.topstocks__header {
+  height: 100px;
+  width: 100px;
+}
+
+.topstocks__header > span {
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.price {
+  font-size: 24px;
+  color: rgba(0, 200, 5, 1);
+  line-height: 32px;
+  font-weight: 500;
+  letter-spacing: -0.33px;
+}
+
+.topstocks__stats {
+  display: flex;
+  flex-direction: column;
+}
+
+.change {
+  color: rgba(0, 200, 5, 1);
+  font-size: 13px;
+}

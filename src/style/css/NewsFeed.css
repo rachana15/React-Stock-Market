@@ -24,7 +24,8 @@
   padding: 0px;
   color: unset;
   appearance: none;
-  margin-right: 10px;
+  margin-right: 24px;
+
   font-weight: bold;
   cursor: pointer;
 }
@@ -39,9 +40,9 @@
 }
 
 .newsfeed__stats {
-  border-top: 1px solid #3b4757;
+  border-top: 1px solid #1e2124;
   padding-top: 12px;
-  border-bottom: 1px solid #3b4757;
+  border-bottom: 1px solid #1e2124;
   padding-bottom: 12px;
 }
 
@@ -50,6 +51,23 @@
 }
 
 .newsfeed__newsHeader {
-  border-bottom: 1px solid #3b4757;
+  border-bottom: 1px solid #1e2124;
   padding-bottom: 12px;
+}
+
+.newsfeed__newsHeader > h1 {
+  font-size: 21px;
+}
+.newsFeed__topStocksBody {
+  display: flex;
+
+  justify-content: space-between;
+}
+
+.newsFeed__topStocksContainer {
+  margin-top: 24px;
+}
+
+.newsFeed__topStocksHeader > h1 {
+  font-size: 21px;
 }

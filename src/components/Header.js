@@ -18,9 +18,7 @@ function Header() {
         </div>
       </div>
       <div className="header__menuItem">
-        <a href="#">Free Stock</a>
-        <a href="#">Portfolio</a>
-        <a href="#">Cash</a>
+        <a href="#">Profile</a>
         <a href="#">Messages</a>
         <a href="#">Account</a>
       </div>

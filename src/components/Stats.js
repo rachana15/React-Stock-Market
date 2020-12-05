@@ -2,10 +2,9 @@ import React, { useEffect, useState } from "react";
 import axios from "axios";
 import "../style/css/Stats.css";
 import StockRow from "./StockRow";
-import ExpandMoreIcon from "@material-ui/icons/ExpandMore";
-import { db } from "../firebase";
+import ExpandLessIcon from "@material-ui/icons/ExpandLess";
 
-const TOKEN = "bv4ghsn48v6qpatdke30";
+const TOKEN = "bv5i62748v6qnlldbtcg";
 const Base_URL = "https://finnhub.io/api/v1/quote";
 
 function Stats() {
@@ -13,10 +12,10 @@ function Stats() {
   const [isOpened, setIsOpened] = useState(false);
   function toggle() {
     setIsOpened(!isOpened);
-    document.getElementsByClassName("MuiSvgIcon-root").style =
-      "transform: rotate(180deg);";
+    // document.getElementsByClassName("MuiSvgIcon-root").style =
+    //   "transform: rotate(180deg);";
   }
-  let getStockData = (stock) => {
+  let getStockData = async (stock) => {
     return axios
       .get(`${Base_URL}?symbol=${stock}&token=${TOKEN}`)
       .catch((error) => {
@@ -68,7 +67,7 @@ function Stats() {
         </div>
         <div className="stats__header">
           <p>Lists</p>
-          <ExpandMoreIcon
+          <ExpandLessIcon
             onClick={toggle}
             className={isOpened ? " " : "icon_transform"}
           />
@@ -93,6 +92,3 @@ function Stats() {
 }
 
 export default Stats;
-
-//https://finnhub.io/api/v1/stock/candle?symbol=AAPL&resolution=1&from=1606608000&to=1606694400&token=bv2ov0748v6ubfuliing
-//https://finnhub.io/api/v1/stock/candle?symbol=AAPL&resolution=1&from=1605543327&to=1605629727&token=bv2aa0v48v6o5ed73a60

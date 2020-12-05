@@ -1,15 +1,15 @@
 import React from "react";
 import "../style/css/NewsRow.css";
-import Logo from "../style/images/logo.png";
 
-function NewsRow() {
+function NewsRow({ url, source, time, headline, summary, image }) {
+  console.log("soruce>>", source);
   return (
     <div className="newsrow">
       <article className="newsrow__article">
-        <a href="" className="newsrow__articleLink"></a>
+        <a href={url} className="newsrow__articleLink" target="__blank"></a>
         <div className="newsrow__articleHeader">
           <div class="newsrow__articleHeaderTitle">
-            <h4>Bazinga</h4>
+            <h4>{source}</h4>
           </div>
           <div className="newsrow__articleTime">
             <span>2h</span>
@@ -18,14 +18,14 @@ function NewsRow() {
         <div class="newsrow__articleBody">
           <div class="newsrow__articleBodyDescription">
             <div class="newsrow__articleBodyDescriptionHeader">
-              <span>This is the header</span>
+              <span>{headline}</span>
             </div>
             <div class="newsrow__articleBodyDescriptionBody">
-              <span>This is the body</span>
+              <span>{summary}</span>
             </div>
           </div>
           <div class="newsrow__articleBodyImage">
-            <img src={Logo} />
+            <img src={image} />
           </div>
         </div>
       </article>

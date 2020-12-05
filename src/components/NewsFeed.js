@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import "../style/css/NewsFeed.css";
 import Chart from "./Chart";
 import News from "./News";
+import TopStocks from "./TopStocks";
 
 function NewsFeed() {
   const [dayStats, setDayStats] = useState(true);
@@ -71,13 +72,23 @@ function NewsFeed() {
             <button onClick={clickYear}> 1Y </button>
           </div>
         </div>
-        <div className="newsFeed__topStocksContainer"></div>
+        <div className="newsFeed__topStocksContainer">
+          <div className="newsFeed__topStocksHeader">
+            <h1>Today's Top Stocks</h1>
+          </div>
+          <div className="newsFeed__topStocksBody">
+            <TopStocks symbol="PLUG" price="US$24.29" change="+3.45%" />
+            <TopStocks symbol="AMD" price="US$94.02" change="+2.98%" />
+            <TopStocks symbol="FCELL" price="US$8.09" change="+2.50%" />
+            <TopStocks symbol="BLDP" price="US$15.87" change="+2.34%" />
+          </div>
+        </div>
         <div className="newsfeed__news">
           <div className="newsfeed__newsHeader">
             <h1>News</h1>
           </div>
 
-          <News />
+          <News/>
         </div>
       </div>
     </div>
