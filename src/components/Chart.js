@@ -3,7 +3,7 @@ import { Line } from "react-chartjs-2";
 import "../style/css/Chart.css";
 import axios from "axios";
 
-const TOKEN = "bv5s5k748v6r8nt3qcsg";
+const TOKEN = "bv5sq7748v6r8nt3qvig";
 function Chart({
   to = "1606976930",
   from = "1606867200",
@@ -12,7 +12,7 @@ function Chart({
   backgroundColor = "black",
 }) {
   const [graphData, setGraphData] = useState([]);
-
+  // console.log("graph data>>>", graphData);
   const options = {
     legend: {
       display: false,
@@ -61,7 +61,7 @@ function Chart({
     // console.log("from>>>>>>>>>", from);
     return axios
       .get(
-        `https://finnhub.io/api/v1/stock/candle?symbol=${stock}&resolution=1&from=${from}&to=${to}&token=${TOKEN}`
+        `https://finnhub.io/api/v1/stock/candle?symbol=${stock}&resolution=1&from=${from}&to=${to}&token=bv5t39n48v6r8nt3r6ng`
       )
       .catch((error) => {
         console.log("error", error);
@@ -101,7 +101,7 @@ function Chart({
         }
       })
     );
-
+    console.log("tempdata >>", tempStockData);
     Promise.all(promises).then(() => {
       setGraphData(tempStockData);
     });

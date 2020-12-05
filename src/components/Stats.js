@@ -4,7 +4,7 @@ import "../style/css/Stats.css";
 import StockRow from "./StockRow";
 import ExpandLessIcon from "@material-ui/icons/ExpandLess";
 
-const TOKEN = "bv5s5k748v6r8nt3qcsg";
+const TOKEN = "bv5t39n48v6r8nt3r6ng";
 const Base_URL = "https://finnhub.io/api/v1/quote";
 
 function Stats() {
@@ -53,7 +53,7 @@ function Stats() {
       );
     });
     Promise.all(promises).then(() => {
-      //   console.log("stock data >>>> ", tempStockData);
+      // console.log("stock data >>>> ", tempStockData);
       setStockData(tempStockData);
     });
     // console.log("stock data usestate >>>> ", stockData);
