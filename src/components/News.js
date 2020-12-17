@@ -3,7 +3,7 @@ import "../style/css/News.css";
 import NewsRow from "./NewsRow";
 import axios from "axios";
 
-const TOKEN = "bv5t39n48v6r8nt3r6ng";
+const TOKEN = "bv5to5f48v6r8nt3rrd0";
 const Base_URL = "https://finnhub.io/api/v1/";
 function News() {
   const [marketNews, setMarketNews] = useState([]);

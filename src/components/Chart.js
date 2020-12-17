@@ -3,7 +3,7 @@ import { Line } from "react-chartjs-2";
 import "../style/css/Chart.css";
 import axios from "axios";
 
-const TOKEN = "bv5sq7748v6r8nt3qvig";
+const TOKEN = "bv5to5f48v6r8nt3rrd0";
 function Chart({
   to = "1606976930",
   from = "1606867200",
@@ -61,7 +61,7 @@ function Chart({
     // console.log("from>>>>>>>>>", from);
     return axios
       .get(
-        `https://finnhub.io/api/v1/stock/candle?symbol=${stock}&resolution=1&from=${from}&to=${to}&token=bv5t39n48v6r8nt3r6ng`
+        `https://finnhub.io/api/v1/stock/candle?symbol=${stock}&resolution=1&from=${from}&to=${to}&token=bv5to5f48v6r8nt3rrd0`
       )
       .catch((error) => {
         console.log("error", error);

@@ -4,7 +4,7 @@ import "../style/css/Stats.css";
 import StockRow from "./StockRow";
 import ExpandLessIcon from "@material-ui/icons/ExpandLess";
 
-const TOKEN = "bv5t39n48v6r8nt3r6ng";
+const TOKEN = "bv5to5f48v6r8nt3rrd0";
 const Base_URL = "https://finnhub.io/api/v1/quote";
 
 function Stats() {
